@@ -1,0 +1,114 @@
+<Schema name="New Schema1">
+  <Cube name="Fato" visible="true" cache="true" enabled="true">
+    <Table name="fato_uso_stack_overflow" schema="public">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" foreignKey="id_pessoa" highCardinality="false" name="pessoa">
+      <Hierarchy name="hcountry" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="country" visible="true" table="pessoa" column="country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hage" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="age" visible="true" table="pessoa" column="age" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="haccessibility" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="accessibility" visible="true" table="pessoa" column="accessibility" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hedlevel" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="edlevel" visible="true" table="pessoa" column="edlevel" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hethnicity" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="ethnicity" visible="true" table="pessoa" column="ethnicity" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hgender" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="gender" visible="true" table="pessoa" column="gender" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hmentalhealth" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="mentalhealth" visible="true" table="pessoa" column="mentalhealth" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hsexuality" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="sexuality" visible="true" table="pessoa" column="sexuality" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="htrans" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="trans" visible="true" table="pessoa" column="trans" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="huk_country" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="uk_country" visible="true" table="pessoa" column="uk_country" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hus_state" visible="true" hasAll="true" primaryKey="id_pessoa">
+        <Table name="pessoa" schema="public">
+        </Table>
+        <Level name="us_state" visible="true" table="pessoa" column="us_state" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" foreignKey="id_programador" highCardinality="false" name="programador">
+      <Hierarchy name="hage1stcode" visible="true" hasAll="true" primaryKey="id_programador">
+        <Table name="programador" schema="public">
+        </Table>
+        <Level name="age1stcode" visible="true" table="programador" column="age1stcode" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hdevtype" visible="true" hasAll="true" primaryKey="id_programador">
+        <Table name="programador" schema="public">
+        </Table>
+        <Level name="devtype" visible="true" table="programador" column="devtype" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hlearncode" visible="true" hasAll="true" primaryKey="id_programador">
+        <Table name="programador" schema="public">
+        </Table>
+        <Level name="learncode" visible="true" table="programador" column="learncode" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hopsys" visible="true" hasAll="true" primaryKey="id_programador">
+        <Table name="programador" schema="public">
+        </Table>
+        <Level name="opsys" visible="true" table="programador" column="opsys" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hyearscode" visible="true" hasAll="true" primaryKey="id_programador">
+        <Table name="programador" schema="public">
+        </Table>
+        <Level name="yearscode" visible="true" table="programador" column="yearscode" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+      <Hierarchy name="hyearscodepro" visible="true" hasAll="true" primaryKey="id_programador">
+        <Table name="programador" schema="public">
+        </Table>
+        <Level name="yearscodepro" visible="true" table="programador" column="yearscodepro" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="New Measure 0" column="existe" aggregator="count" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
